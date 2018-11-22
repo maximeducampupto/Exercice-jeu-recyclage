@@ -63,7 +63,7 @@ let game = {
                                 "nom": currentItem.nom,
                                 "reponse" : currentItem.reponse,
                                 "userChoice" : this.id,
-                                "result" : "Bonne réponse!"
+                                "result" : "bonne réponse!"
                             }
                         );
                     } else {
@@ -72,7 +72,7 @@ let game = {
                                 "nom": currentItem.nom,
                                 "reponse" : currentItem.reponse,
                                 "userChoice" : this.id,
-                                "result" : "Mauvaise réponse!"
+                                "result" : "mauvaise réponse!"
                             }
                         )
                     }
