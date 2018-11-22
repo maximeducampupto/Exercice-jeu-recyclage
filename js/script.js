@@ -8,23 +8,25 @@ function runGame()
 
 function translate(el)
 {
+    let temp;
     switch(el) {
         case "yellow":
-            return "Jaune";
+            temp =  "Jaune";
             break;
         case "blue":
-            return "Bleu";
+            temp = "Bleu";
             break;
         case "brown":
-        return "Marron";
+            temp = "Marron";
             break;
         case "green":
-            return "Vert";
+            temp = "Vert";
             break;
         default:
             return el;
 
     }
+    return temp;
 }
 
 let startButton = document.getElementById('start'),
@@ -272,7 +274,7 @@ let score = {
         document.body.style.overflowY = "scroll";
     }
 
-}
+};
 
 let animator = {
 
