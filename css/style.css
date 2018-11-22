@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+img {
+    width: 100px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.b-yellow {
+    background: #E0D42B
+}
+
+.b-green {
+    background: #0B2E13
+}
+
+.b-blue {
+    background: #16193D
+}
+
+.b-brown {
+    background: #69471E
+}
+
+
+.bin {
+    width: 120px;
+}
+
+.bin:hover {
+    cursor: pointer;
+}
+
+.bin-body {
+    height: 200px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bin-body i {
+    font-size: 2rem;
+    color: #e6e6e6;
+}
+
+.bin-top {
+    width: 120px;
+    height: 30px;
+    border-bottom: 2px solid black;
+    border-radius: 10%;
+}
+
+.wheels-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8px;
+}
+
+.wheel {
+    position: relative;
+    bottom: 15px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    border-radius: 30% 50%;
+    background: black;
+}
+
+#game-container {
+    width: 80%;
+    margin: 3rem auto 5rem auto;
+}
+
+#game {
+    position :relative;
+}
+
+#game h1, button[id="start"], #score h1 {
+    text-align: center;
+    margin: 0 auto 5rem auto;
+  /*  font-family: 'Fredoka One', cursive; */
+    font-family: 'Lato', sans-serif;
+    color: #106900;
+    border: 3px solid #106900;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 2rem;
+}
+
+#game button[id="start"] {
+    font-size: 2rem;
+    margin-top: 3rem;
+    background: none;
+    position: relative;
+    left: 50%;
+    font-weight: bold;
+    transform: translate(-50%);
+
+}
+
+#game button[id="start"]:hover {
+    color: white;
+    background: #106900;
+    cursor: pointer;
+}
+
+#bins-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#garbage-display {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+#garbage-display h2 {
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    color: #106900;
+}
+
+#score {
+    position: relative;
+    left: 2000px;
+    bottom: 90vh;
+}
+
+.dechet-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dechet-container:first-child {
+    margin-bottom: 10rem;
+}
+
+.startButtonToLeft {
+    animation: startButtonToLeft .4s forwards;
+}
+
+.garbageContainerToTop {
+    animation: garbageContainerToTop .4s forwards;
+}
+
+.hideGarbage {
+    animation: hideGarbage .4s forwards;
+}
+
+.gameBoardToLeft {
+    animation: gameBoardToLeft .4s forwards;
+}
+
+.scoreBoardToLeft {
+    animation: scoreBoardToLeft .4s forwards;
+}
+
+@keyframes startButtonToLeft {
+    0% {
+        position: relative;
+        left: 50%;
+    }
+    100% {
+        left: -2000px;
+    }
+}
+
+@keyframes garbageContainerToTop {
+    0% {
+        bottom: -50px;
+    }
+    100% {
+        bottom: 130px;
+    }
+}
+
+@keyframes hideGarbage {
+    0% {
+        position: relative;
+        left: 0;
+    }
+    100% {
+        left: -2000px;
+        display: none;
+    }
+}
+
+@keyframes gameBoardToLeft {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -2000px;
+    }
+}
+
+@keyframes scoreBoardToLeft {
+    0% {
+        left: 2000px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+#score p[id="total"] {
+    text-align: center;
+    margin: 0 auto 5rem auto;
+    font-family: 'Lato', sans-serif;
+    color: #106900;
+    border-bottom: 3px solid #106900;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.correction-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.correction {
+    border: 3px solid #106900;
+    color: #106900;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 600px;
+}
+
+.correction p {
+    font-size: 1.3rem;
+    margin: .3rem 0;
+    font-family: 'Lato', sans-serif;
+}
